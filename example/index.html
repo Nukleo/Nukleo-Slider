@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>untitled</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script src="js/jquery-1.4.4.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.nukleoslider.js"></script>
+	<script>
+		$(function(){
+			$('#slider').nukleoslider();
+		});
+	</script>
+</head>
+
+<body>
+    <ul id="slider">
+
+		<li class="slide">
+			<img src="img/sky.jpg" data-base='{"opacity":"0"}' data-in='{"opacity":"1"}' data-speed="700" class="slide-content" />
+			<img src="img/mont.png" data-base='{"bottom":"0","left":"600"}' data-in='{"bottom":"0","left":"0"}' data-out='{"left":"600"}' data-speed="700" class="slide-content" />
+			<img src="img/mont2.png" data-base='{"bottom":"0","right":"-620"}' data-in='{"bottom":"0","right":"0"}' data-out='{"bottom":"0","right":"-620"}' data-speed="500" class="slide-content" />
+			<img src="img/rond.png" data-base='{"top":"20","left":"850"}' data-in='{"top":"20","left":"250"}' data-out='{"top":"20","left":"820"}' data-speed="400" class="slide-content" />
+			<div data-base='{"top":"20","left":"200","opacity":"0"}' data-in='{"top":"20","left":"50","opacity":"1"}' data-speed="1000" class="slide-content" style="background:#ccc; width:150px;"><p>Slide 1<br/>Et encore du bla</p></div>
+		</li>
+
+		<li class="slide">
+			<img src="img/summer.jpg" data-base='{"opacity":"0"}' data-in='{"opacity":"1"}' data-speed="700" class="slide-content" />
+			<img src="img/mont.png" data-base='{"bottom":"0","left":"-620"}' data-in='{"bottom":"0","left":"0"}' data-easing="easeInOutBack" class="slide-content" />
+			<img src="img/mont2.png" data-base='{"bottom":"0","right":"620"}' data-in='{"bottom":"0","right":"0"}' data-easing="easeInOutBack" class="slide-content" />
+			<img src="img/rond.png" data-base='{"top":"20","left":"-620"}' data-in='{"top":"20","left":"250"}' data-easing="easeInOutBack" class="slide-content" />
+			<p data-base='{"top":"20","left":"620"}' data-in='{"top":"20","left":"50"}' data-easing="easeInOutBack" class="slide-content">Slide 2<br/>Et encore du bla</p>
+		</li>
+
+		<li class="slide">
+			<img src="img/grass.jpg" data-base='{"opacity":"0"}' data-in='{"opacity":"1"}' data-speed="700" class="slide-content" />
+			<img src="img/mont.png" data-base='{"bottom":"-150","left":"0"}' data-in='{"bottom":"0","left":"0"}' data-speed="700" class="slide-content" />
+			<img src="img/mont2.png" data-base='{"bottom":"-400","right":"0"}' data-in='{"bottom":"0","right":"0"}' data-speed="500" class="slide-content" />
+			<img src="img/rond.png" data-base='{"top":"-90","left":"250"}' data-in='{"top":"20","left":"250"}' data-speed="600" class="slide-content" />
+			<p data-base='{"top":"60","left":"-600"}' data-in='{"top":"60","left":"100"}' data-out='{"top":"60","left":"620"}' data-speed="800" class="slide-content">Slide 3<br/>Et encore du bla</p>
+		</li>
+
+    </ul>
+
+</body>
+</html>
