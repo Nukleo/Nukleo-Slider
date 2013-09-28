@@ -46,20 +46,22 @@
 
 		// default options
 		var defaults = {
-			speed:		500,			// Default animation speed if not set on an element
-			pauseDelay:	4000,			// How long each slide stays visible. Play with this if you have long speed settings as they are substracted from this
-			easing:		"easeInOutExpo"	// easing. if easing plugin is being used, if not change to swing or linear
+			speed:			500,				// Default animation speed if not set on an element
+			pauseDelay:		4000,				// How long each slide stays visible. Play with this if you have long speed settings as they are substracted from this
+			easing:			"easeInOutExpo",	// easing. if easing plugin is being used, if not change to swing or linear
+			slideClass:		".slide",			// class used for a single slide
+			animatedClass:	".slide-content"	// class used for the animated content within a slide
 		};
 
 		var opts = $.extend(defaults, options);
 
 
 		// variables
-		var $slides = this.find('.slide');	// cache the slides
-		var numSlides = $slides.length;		// number of slides
-		var currentSlide = 0;				// which slide is currently active
-		var animationSettings = [];			// array containing all animation settings
-		var timer = 0;						// on first run we need to start animating right away, aftwards we use the pauseDelay
+		var $slides = this.find(opts.slideClass);	// cache the slides
+		var numSlides = $slides.length;				// number of slides
+		var currentSlide = 0;						// which slide is currently active
+		var animationSettings = [];					// array containing all animation settings
+		var timer = 0;								// on first run we need to start animating right away, aftwards we use the pauseDelay
 
 // ---- FUNCTIONS --------------------------------------------------------------------------------------------- //
 
@@ -97,11 +99,11 @@
 			$slides.each(function(){
 				var $this = $(this);
 				var slideArray = [];
-				var $slideElems = $this.find('.slide-content');
+				var $slideElems = $this.find(opts.animatedClass);
 
 				// build array of elements of each slide
 				$slideElems.each(function(){
-					slideArray.push( getSettings( $this ) );
+					slideArray.push( getSettings( $(this) ) );
 				});
 
 				animationSettings.push(slideArray);
